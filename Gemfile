@@ -8,11 +8,11 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.9.0"
+gem "jekyll", "~> 4.4", ">= 4.4.1"
 
 gem "kramdown-parser-gfm", "~>1.1"
-gem "jemoji", "~> 0.12"
-gem "webrick", "~> 1.8.1"
+gem "jemoji", "~> 0.13"
+gem 'webrick', '~> 1.9', '>= 1.9.1'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
@@ -20,16 +20,14 @@ gem "webrick", "~> 1.8.1"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-feed", "~> 0.17"
   gem "jekyll-github-metadata"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
-install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
-  gem "tzinfo", "~> 1.2"
-  gem "tzinfo-data"
-end
+gem 'tzinfo', '~> 2.0', '>= 2.0.6', platforms: :windows
+gem "tzinfo-data", platforms: :windows
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
+gem "wdm", "~> 0.2.0", platforms: :windows
