@@ -1,6 +1,6 @@
-title        : "pk11.us"
+title        : "pk11.sh"
 description  : "Pk11's site"
-repository   : "Epicpkmn11/pk11.us"
+repository   : "Epicpkmn11/pk11.sh"
 color        : "#f2acae"
 markdown_ext : "markdown,mkdown,mkdn,mkd,md,html"
 include      : [".well-known"]
